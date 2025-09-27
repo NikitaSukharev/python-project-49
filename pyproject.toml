@@ -14,3 +14,14 @@ dependencies = [
 
 [project.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.13.2",
+]
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
