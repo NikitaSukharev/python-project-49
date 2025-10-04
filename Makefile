@@ -1,14 +1,39 @@
 install:
 	uv sync
 
+lint:
+	uv run ruff check brain_games
+
+build:
+	rm -rf dist
+	uv build
+
+release:
+	rm -rf dist
+	uv version patch
+	uv build
+	uv pip install --force-reinstall dist/*.whl
+
+package-install:
+	uv pip install -e .
+
+clean:
+	rm -rf dist .venv *.egg-info
+
 brain-games:
 	uv run brain-games
 
-build:
-	uv build
+brain-even:
+	uv run brain-even
 
-package-install:
-	uv tool install dist/*.whl
+brain-calc:
+	uv run brain-calc
 
-lint:
-	uv run ruff check brain_games
+brain-gcd:
+	uv run brain-gcd
+
+brain-progression:
+	uv run brain-progression
+
+brain-prime:
+	uv run brain-prime
