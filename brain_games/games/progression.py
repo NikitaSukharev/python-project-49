@@ -2,6 +2,7 @@ import random
 
 DESCRIPTION = "What number is missing in the progression?"
 
+
 def generate_round():
     start = random.randint(1, 50)
     step = random.randint(2, 10)
