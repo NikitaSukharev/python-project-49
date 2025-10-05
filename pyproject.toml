@@ -27,6 +27,7 @@ dev = [
 [tool.ruff]
 line-length = 88
 target-version = "py311"
+exclude = ["code/fix_blank_lines.py"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I"]
