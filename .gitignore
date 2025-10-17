@@ -5,3 +5,5 @@ __pycache__/
 *.pyd
 *.egg-info/
 dist/
+fix_blank_lines.py
+.ruff_cache

@@ -15,7 +15,7 @@ release:
 	uv pip install --force-reinstall dist/*.whl
 
 package-install:
-	uv pip install -e .
+	uv tool install dist/*.whl
 
 clean:
 	rm -rf dist .venv *.egg-info
